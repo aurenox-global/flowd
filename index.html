@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flowd — Automatiza tu Android</title>
 <meta name="description" content="Flowd: automatiza tu teléfono Android sin complicaciones. 100% local, sin anuncios. Descarga la APK.">
 <meta name="theme-color" content="#0E1013">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=3">
 <link rel="icon" type="image/png" href="assets/icon.png">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <meta property="og:title" content="Flowd — Automatiza tu Android">
@@ -21,10 +21,17 @@
     <span>Flowd</span>
   </a>
   <nav class="nav-links">
-    <a href="#features">Funciones</a>
-    <a href="#install">Instalar</a>
-    <a href="https://github.com/aurenox-global/flowd" target="_blank" rel="noopener">GitHub</a>
-    <a class="btn btn-small" id="dl-top" href="https://github.com/aurenox-global/flowd/releases/latest/download/Flowd.apk">Descargar</a>
+    <a href="#features" data-t="nav.features">Funciones</a>
+    <a href="#install" data-t="nav.install">Instalar</a>
+    <a href="https://github.com/aurenox-global/flowd" target="_blank" rel="noopener" data-t="nav.github">GitHub</a>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-setlang="es" class="active">ES</button>
+      <button type="button" data-setlang="en">EN</button>
+    </div>
+    <button type="button" class="iconbtn" data-theme-toggle aria-label="Tema / Theme">
+      <span class="material-icons">light_mode</span>
+    </button>
+    <a class="btn btn-small" href="https://github.com/aurenox-global/flowd/releases/latest/download/Flowd.apk" data-t="nav.download">Descargar</a>
   </nav>
 </header>
 
@@ -32,32 +39,30 @@
 
   <section class="hero">
     <img class="hero-icon" src="assets/icon.png" alt="Flowd" width="112" height="112">
-    <h1>Automatiza tu Android<br><span class="accent">sin complicaciones</span></h1>
-    <p class="sub">Crea automatizaciones con una frase, con bloques <em>Cuando → Entonces</em> o con un mapa de nodos. Todo funciona en tu teléfono.</p>
+    <h1 data-t-html="hero.h1">Automatiza tu Android<br><span class="accent">sin complicaciones</span></h1>
+    <p class="sub" data-t-html="hero.sub">Crea automatizaciones con una frase, con bloques <em>Cuando → Entonces</em> o con un mapa de nodos. Todo funciona en tu teléfono.</p>
     <div class="cta">
-      <a class="btn" id="dl-hero" href="https://github.com/aurenox-global/flowd/releases/latest/download/Flowd.apk">
-        ⬇ Descargar la APK
-      </a>
-      <a class="btn ghost" href="#features">Ver funciones</a>
+      <a class="btn" href="https://github.com/aurenox-global/flowd/releases/latest/download/Flowd.apk" data-t="hero.dl">⬇ Descargar la APK</a>
+      <a class="btn ghost" href="#features" data-t="hero.features">Ver funciones</a>
     </div>
-    <p class="meta">Versión <strong id="ver">1.7.1</strong> · Android 8.0+ · <strong>sin anuncios</strong> · 100% local</p>
-    <p class="soon">🔜 Próximamente en Google Play</p>
+    <p class="meta"><span data-t="hero.versionLabel">Versión</span> <strong id="ver">1.7.1</strong> · Android 8.0+ · <strong data-t="hero.noAds">sin anuncios</strong> · <span data-t="hero.local">100% local</span></p>
+    <p class="soon" data-t="hero.soon">🔜 Próximamente en Google Play</p>
   </section>
 
   <section id="features" class="features">
-    <h2>Qué hace Flowd</h2>
+    <h2 data-t="feat.title">Qué hace Flowd</h2>
     <div class="grid">
-      <article class="card"><span class="ic material-icons">auto_awesome</span><h3>Crea con una frase</h3><p>«cuando la batería baje del 20 pon el brillo al 10» — y listo, sin menús.</p></article>
-      <article class="card"><span class="ic material-icons">view_module</span><h3>Editor por bloques</h3><p><em>Cuando… → Solo si… → Entonces…</em> claro y directo.</p></article>
-      <article class="card"><span class="ic material-icons">account_tree</span><h3>Mapas de nodos</h3><p>Crea y edita flujos como un mapa mental: arrastra, conecta y guarda.</p></article>
-      <article class="card"><span class="ic material-icons">widgets</span><h3>Plantillas</h3><p>Modo noche, ahorro de batería, modo conducción… de un toque.</p></article>
-      <article class="card"><span class="ic material-icons">bolt</span><h3>Muchas acciones</h3><p>Brillo, volumen, No molestar, linterna, música, abrir apps, SMS, ubicación…</p></article>
-      <article class="card"><span class="ic material-icons">lock</span><h3>Privacidad total</h3><p>Sin cuentas, sin nube, sin permisos de Internet. Nada sale de tu teléfono.</p></article>
+      <article class="card"><span class="ic material-icons">auto_awesome</span><h3 data-t="feat.1.t">Crea con una frase</h3><p data-t-html="feat.1.d">«cuando la batería baje del 20 pon el brillo al 10» — y listo, sin menús.</p></article>
+      <article class="card"><span class="ic material-icons">view_module</span><h3 data-t="feat.2.t">Editor por bloques</h3><p data-t-html="feat.2.d"><em>Cuando… → Solo si… → Entonces…</em> claro y directo.</p></article>
+      <article class="card"><span class="ic material-icons">account_tree</span><h3 data-t="feat.3.t">Mapas de nodos</h3><p data-t="feat.3.d">Crea y edita flujos como un mapa mental: arrastra, conecta y guarda.</p></article>
+      <article class="card"><span class="ic material-icons">widgets</span><h3 data-t="feat.4.t">Plantillas</h3><p data-t="feat.4.d">Modo noche, ahorro de batería, modo conducción… de un toque.</p></article>
+      <article class="card"><span class="ic material-icons">bolt</span><h3 data-t="feat.5.t">Muchas acciones</h3><p data-t="feat.5.d">Brillo, volumen, No molestar, linterna, música, abrir apps, SMS, ubicación…</p></article>
+      <article class="card"><span class="ic material-icons">lock</span><h3 data-t="feat.6.t">Privacidad total</h3><p data-t="feat.6.d">Sin cuentas, sin nube, sin permisos de Internet. Nada sale de tu teléfono.</p></article>
     </div>
   </section>
 
   <section class="iconrow">
-    <h2>Los mismos iconos que dentro de la app</h2>
+    <h2 data-t="icons.title">Los mismos iconos que dentro de la app</h2>
     <div class="icons">
       <span class="material-icons">wifi</span>
       <span class="material-icons">bluetooth</span>
@@ -81,32 +86,33 @@
   </section>
 
   <section id="install" class="install">
-    <h2>Cómo instalarla</h2>
+    <h2 data-t="install.title">Cómo instalarla</h2>
     <ol class="steps">
-      <li>Pulsa <strong>Descargar la APK</strong> (se baja desde GitHub Releases).</li>
-      <li>Ábrela e <strong>instala</strong>. Si Android pide permiso, activa «Instalar apps desconocidas» para tu navegador.</li>
-      <li>Abre Flowd y concede los permisos que pida en <strong>Ajustes</strong>.</li>
+      <li data-t-html="install.s1">Pulsa <strong>Descargar la APK</strong> (se baja desde GitHub Releases).</li>
+      <li data-t-html="install.s2">Ábrela e <strong>instala</strong>. Si Android pide permiso, activa «Instalar apps desconocidas» para tu navegador.</li>
+      <li data-t-html="install.s3">Abre Flowd y concede los permisos que pida en <strong>Ajustes</strong>.</li>
     </ol>
     <div class="verify">
-      <p class="meta">Integridad del APK (SHA‑256):</p>
+      <p class="meta" data-t="verify.title">Integridad del APK (SHA‑256):</p>
       <code id="sha">11a59c504766e401c82cf18f2a46bbf019c24e86ec53f53bc1194fbc8d2b6487</code>
-      <p class="tiny">Solo la versión firmada por «Andrés Mag» es auténtica. Si el hash no coincide, <strong>no la instales</strong>.</p>
+      <p class="tiny" data-t-html="verify.note">Solo la versión firmada por «Andrés Mag» es auténtica. Si el hash no coincide, <strong>no la instales</strong>.</p>
     </div>
   </section>
 
   <section class="security">
-    <h2>Seguridad y propiedad</h2>
-    <p><strong>Qué hacemos:</strong> la app se publica <strong>firmada</strong> con una clave privada del autor y <strong>ofuscada/optimizada</strong> (R8). Cualquier modificación del APK rompe la firma, y se publica el hash para que puedas verificar la original.</p>
-    <p><strong>La verdad:</strong> ningún APK es 100% incorporeable — si alguien lo descompila, técnicamente puede tocarlo (como cualquier app de Android). Lo que garantizamos es que una copia alterada <strong>ya no es Flowd</strong>: no coincidirá el hash ni la firma. El código fuente y la marca están protegidos por derechos de autor.</p>
+    <h2 data-t="sec.title">Seguridad y propiedad</h2>
+    <p data-t-html="sec.p1"><strong>Qué hacemos:</strong> la app se publica <strong>firmada</strong> con una clave privada del autor y <strong>ofuscada/optimizada</strong> (R8). Cualquier modificación del APK rompe la firma, y se publica el hash para que puedas verificar la original.</p>
+    <p data-t-html="sec.p2"><strong>La verdad:</strong> ningún APK es 100% incorporeable — si alguien lo descompila, técnicamente puede tocarlo (como cualquier app de Android). Lo que garantizamos es que una copia alterada <strong>ya no es Flowd</strong>: no coincidirá el hash ni la firma. El código fuente y la marca están protegidos por derechos de autor.</p>
   </section>
 
 </main>
 
 <footer>
-  <p>Hecho en <strong>Cuba</strong> 🇨🇺 por <strong>Andrés Mag</strong></p>
-  <p class="tiny">© 2026 Andrés Mag. Todos los derechos reservados. Prohibida la copia, modificación, reventa o redistribución sin permiso escrito.</p>
-  <p class="tiny">Flowd no está afiliado a Google ni a Android.</p>
+  <p data-t-html="foot.made">Hecho en <strong>Cuba</strong> 🇨🇺 por <strong>Andrés Mag</strong></p>
+  <p class="tiny" data-t="foot.rights">© 2026 Andrés Mag. Todos los derechos reservados. Prohibida la copia, modificación, reventa o redistribución sin permiso escrito.</p>
+  <p class="tiny" data-t="foot.disclaimer">Flowd no está afiliado a Google ni a Android.</p>
 </footer>
 
+<script src="app.js?v=2" defer></script>
 </body>
 </html>
